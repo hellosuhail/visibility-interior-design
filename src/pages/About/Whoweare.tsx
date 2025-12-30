@@ -1,5 +1,7 @@
 import { Sofa } from "lucide-react";
 import { FaFaucetDrip, FaShower } from "react-icons/fa6";
+import type { ReactNode } from "react";
+
 export default function WhoWeAre() {
     const stats = [
   {
@@ -172,7 +174,13 @@ export default function WhoWeAre() {
   );
 }
 
-function Feature({ icon, title, desc }) {
+
+type FeatureProps = {
+  icon: ReactNode;
+  title: string;
+  desc: string;
+};
+function Feature({ icon, title, desc }: FeatureProps) {
   return (
     <div className="flex gap-6 items-start">
       <div className="text-3xl">{icon}</div>
